@@ -1,6 +1,6 @@
 # ROICropper
-ROI Cropper: Crop image(s) object from a file or folder to 1:1 ratio.
-Crop objek dalam gambar dari file atau folder menjadi gambar dengan rasio 1:1.
+- ROI Cropper: Crop image(s) object from a file or folder to 1:1 ratio.
+- ROI Cropper: Crop objek dalam gambar dari file atau folder menjadi gambar dengan rasio 1:1.
 
 # Usage
 ```
