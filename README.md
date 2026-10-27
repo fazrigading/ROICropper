@@ -9,3 +9,6 @@ python ROICropper.py --input path/to/image/file/folder --output path/to/output/f
 ```
 - Size (Default: 640)
 - Padding (Default: 10)
+
+# Note
+Will be revamped in 28 Oct 2026
