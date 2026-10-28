@@ -2,14 +2,13 @@
 
 from __future__ import annotations
 
-import sys
 from pathlib import Path
 
 import cv2
 import numpy as np
 import typer
 from rich.console import Console
-from rich.progress import Progress, TextColumn, BarColumn, SpinnerColumn
+from rich.progress import BarColumn, Progress, SpinnerColumn, TextColumn
 
 app = typer.Typer(help="Crop image objects to any aspect ratio focused on the main object.", add_completion=False)
 console = Console()
@@ -120,7 +119,7 @@ def batch(
                 _save_result(result, str(out_file), fmt)
                 count += 1
                 progress.advance(task)
-            except Exception as e:
+            except OSError as e:
                 console.print(f"  [red]Error processing {img_path.name}:[/] {e}")
                 failed += 1
                 progress.advance(task)
