@@ -1,0 +1,9 @@
+.git
+.github
+__pycache__
+*.pyc
+.codegraph
+.projectmem
+commandcode
+*.md~
+.DS_Store
