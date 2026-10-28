@@ -2,4 +2,4 @@
 
 from roicropper.core import crop_to_aspect_ratio, crop_to_square
 
-__all__ = ["crop_to_square", "crop_to_aspect_ratio"]
+__all__ = ["crop_to_aspect_ratio", "crop_to_square"]

@@ -2,9 +2,10 @@
 
 from __future__ import annotations
 
+from pathlib import Path
+
 import cv2
 import numpy as np
-from pathlib import Path
 
 
 def _find_object_bounds(img: np.ndarray) -> tuple[int, int, int, int] | None:
@@ -55,10 +56,8 @@ def crop_to_square(
     square_x = center_x - half_size
     square_y = center_y - half_size
 
-    if square_x < 0:
-        square_x = 0
-    if square_y < 0:
-        square_y = 0
+    square_x = max(square_x, 0)
+    square_y = max(square_y, 0)
     if square_x + padded_size > img.shape[1]:
         square_x = img.shape[1] - padded_size
     if square_y + padded_size > img.shape[0]:
@@ -131,10 +130,8 @@ def crop_to_aspect_ratio(
     start_x = center_x - half_w
     start_y = center_y - half_h
 
-    if start_x < 0:
-        start_x = 0
-    if start_y < 0:
-        start_y = 0
+    start_x = max(start_x, 0)
+    start_y = max(start_y, 0)
     if start_x + crop_width_padded > img.shape[1]:
         start_x = img.shape[1] - crop_width_padded
     if start_y + crop_height_padded > img.shape[0]:
