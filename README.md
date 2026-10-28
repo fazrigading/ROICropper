@@ -58,4 +58,17 @@ docker run -p 7860:7860 roicropper
 | `--padding`, `-p` | | `int` | `10` | Padding in pixels around object |
 | `--format`, `-f` | | `str` | `png` | Output format: jpg or png |
 
+## Development
+
+### Setup
+
+```bash
+uv pip install -e '.[dev,cli,web]'
+python -m pytest tests/ -v
+```
+
+### Adding Fixtures
+
+Place sample images in `tests/fixtures/` for integration tests. Use common names like `sample.png`, `landscape.jpg`.
+
 Built by [Fazri Gading](https://github.com/fazrigading/ROICropper)
