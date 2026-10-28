@@ -6,3 +6,7 @@ __pycache__/
 .env
 venv/
 .venv/
+.commandcode/
+.projectmem/
+.claude/
+.agents/
