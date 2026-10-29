@@ -62,6 +62,10 @@ docker build -t roicropper .
 docker run -p 7860:7860 roicropper
 ```
 
+## HuggingFace Spaces
+
+This app is designed to run on [HuggingFace Spaces](https://huggingface.co/spaces) as a Gradio app. The root `app.py` launches the interface.
+
 ## Parameters
 
 | Flag | Short | Type | Default | Description |
