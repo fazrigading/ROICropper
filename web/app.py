@@ -194,8 +194,8 @@ with gr.Blocks(title="ROICropper") as demo:
 def launch(server_name: str = "0.0.0.0", server_port: int = 7860) -> None:
     """Launch the Gradio web UI."""
     print(f"ROICropper web UI starting at http://{server_name}:{server_port}")
-    demo.launch(server_name=server_name, server_port=server_port, theme=theme)
+    demo.launch(server_name=server_name, server_port=server_port, theme=theme, ssr_mode=False)
 
 
 if __name__ == "__main__":
-    demo.launch(server_name="0.0.0.0", server_port=7860, theme=theme)
+    demo.launch(server_name="0.0.0.0", server_port=7860, theme=theme, ssr_mode=False)
