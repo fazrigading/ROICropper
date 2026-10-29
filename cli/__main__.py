@@ -128,5 +128,23 @@ def batch(
     console.print(status)
 
 
+@app.command()
+def web(
+    host: str = typer.Option("0.0.0.0", "--host", "-h", help="Host to bind to"),
+    port: int = typer.Option(7860, "--port", "-p", help="Port to listen on"),
+) -> None:
+    """Launch the Gradio web interface."""
+    try:
+        import gradio
+    except ImportError:
+        console.print("[red]Error:[/] Gradio is not installed. Run: pip install 'roicropper[web]'")
+        raise typer.Exit(1)
+
+    from roicropper.web import launch
+
+    console.print(f"[green]Starting:[/] ROICropper web UI at http://{host}:{port}")
+    launch(server_name=host, server_port=port)
+
+
 if __name__ == "__main__":
     app()

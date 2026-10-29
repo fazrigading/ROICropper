@@ -10,3 +10,6 @@ venv/
 .projectmem/
 .claude/
 .agents/
+.codegraph/
+.vercel
+.env*

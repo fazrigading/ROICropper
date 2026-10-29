@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "roicropper"
-version = "1.0.0"
+version = "1.0.1"
 description = "Crop image objects to 1:1 square or any aspect ratio focusing on the main object"
 readme = "README.md"
 license = { file = "LICENSE" }
@@ -30,9 +30,10 @@ dev = [
 
 [project.scripts]
 roi-cropper = "cli.__main__:app"
+roi-cropper-web = "roicropper.web:launch"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/roicropper"]
+packages = ["src/roicropper", "cli"]
 
 [tool.ruff]
 line-length = 100
