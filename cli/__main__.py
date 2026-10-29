@@ -134,9 +134,9 @@ def web(
     port: int = typer.Option(7860, "--port", "-p", help="Port to listen on"),
 ) -> None:
     """Launch the Gradio web interface."""
-    try:
-        import gradio
-    except ImportError:
+    import importlib.util
+
+    if importlib.util.find_spec("gradio") is None:
         console.print("[red]Error:[/] Gradio is not installed. Run: pip install 'roicropper[web]'")
         raise typer.Exit(1)
 
