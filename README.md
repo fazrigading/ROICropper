@@ -66,13 +66,13 @@ docker run -p 7860:7860 roicropper
 
 | Flag | Short | Type | Default | Description |
 |------|-------|------|---------|-------------|
-| `--size`, `-s` | | `int` | `640` | Output dimensions for square crop |
+| `--size` | `-s` | `int` | `640` | Output dimensions for square crop |
 | `--max-size` | | `int` | `1280` | Maximum dimension for aspect crop |
-| `--aspect-ratio`, `-a` | | `str` | `1:1` | Aspect ratio, e.g. `16:9` |
-| `--padding`, `-p` | | `int` | `10` | Padding in pixels around object |
-| `--format`, `-f` | | `str` | `png` | Output format: jpg or png |
-| `--host`, `-h` | | `str` | `0.0.0.0` | Host to bind (web command) |
-| `--port`, `-p` | | `int` | `7860` | Port to listen on (web command) |
+| `--aspect-ratio` | `-a` | `str` | `1:1` | Aspect ratio, e.g. `16:9` |
+| `--padding` | `-p` | `int` | `10` | Padding in pixels around object |
+| `--format` | `-f` | `str` | `png` | Output format: jpg or png |
+| `--host` | `-h` | `str` | `0.0.0.0` | Host to bind (web command) |
+| `--port` | `-p` | `int` | `7860` | Port to listen on (web command) |
 
 ## Web Interface Features
 
@@ -96,4 +96,4 @@ Place sample images in `tests/fixtures/` for integration tests. Use common names
 
 ---
 
-Built by [Fazri Gading](https://github.com/fazrigading/ROICropper)
+Built by [Fazri Gading](https://github.com/fazrigading/ROICropper) in 2026
