@@ -1,3 +1,15 @@
+---
+title: ROICropper
+emoji: 🌍
+colorFrom: green
+colorTo: pink
+sdk: gradio
+sdk_version: 6.31.0
+app_file: app.py
+pinned: false
+license: mit
+---
+
 # ROICropper
 
 Crop image objects from files or folders into any aspect ratio (1:1, 4:3, 16:9, etc.) focused on the main object against a white background.
